@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        Vector3 movement = new Vector3(moveValue.x, O.Of, moveValue.y);
+        Vector3 movement = new Vector3(moveValue.x, 0.0f, moveValue.y);
 
-        GetComponent<RigidBody>().AddForce(movement * speed * Time.fixedDeltaTime);
+        GetComponent<Rigidbody>().AddForce(movement * speed * Time.fixedDeltaTime);
     }
 }
