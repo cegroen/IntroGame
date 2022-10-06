@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour {
                 closestPickUp = i;
             }
         }
-        distText.text = "" + shortestDist;
+        distText.text = "Distance to blue cube: " + Math.Round(shortestDist, 2, MidpointRounding.AwayFromZero);
         shortestDist = 1000;
         pickUps.transform.GetChild(closestPickUp).gameObject.GetComponent <Renderer >().material.color = Color.blue;
         // foreach (Transform t in pickUpArray) {
